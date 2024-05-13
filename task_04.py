@@ -35,6 +35,7 @@ class Schedule:
 
     def show_schedule(self):
         df = pd.DataFrame(self.week_schedule)
+        df.index += 1
         with open('schedule.xlsx', 'w', encoding='utf-8') as f:
             df.to_excel('schedule.xlsx')
 
